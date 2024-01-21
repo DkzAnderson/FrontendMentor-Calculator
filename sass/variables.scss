@@ -1,3 +1,5 @@
+@import './media_queries.scss';
+
 *{
     margin: 0;
     padding: 0;
@@ -40,6 +42,7 @@ $Custom-text-color2: #fde52a;
 
 .theme-light{
     background-color: $Light-background-color;
+
     .head{
         h3,h5{
             color: $Light-text-color1;
@@ -80,6 +83,14 @@ $Custom-text-color2: #fde52a;
             color: white;
         }
 
+    }
+
+    @include querie-s{
+        background-color: #39a6d1;
+        .main{
+            border: 3px solid white;
+            background-color: #acacac;
+        }
     }
 }
 
@@ -128,6 +139,14 @@ $Custom-text-color2: #fde52a;
         }
 
     }
+
+    @include querie-s{
+        background-color: #111;
+        .main{
+            border: 3px solid white;
+            background-color: #000000;
+        }
+    }
 }
 
 .theme-custom{
@@ -175,4 +194,13 @@ $Custom-text-color2: #fde52a;
         }
 
     }
+
+    @include querie-s{
+        background-color: #de98e7;
+        .main{
+            border: 3px solid $Custom-text-color1;
+            background-color: #5e0075;
+        }
+    }
 }
+
