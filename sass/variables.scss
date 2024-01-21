@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+
+// Colors Theme 1 - Dark
+$Dark-background-color:#3b4664;
+$Dark-color1       : #252d44;
+$Dark-color2       : #181f32;
+$Dark-btn-border   : #0000006e;
+$Dark-btn-reset    : #a2b3e1;
+$Dark-btn-result   : #f96c5b;
+$Dark-btn-general  : #eae3db;
+$Dark-text-color1  : #343428;
+$Dark-text-color2  : #fdffff;
+// Colors Theme 2 - Light
+$Light-background-color: #bdbdbd;
+$Light-color1      : #d3cdcd;
+$Light-color2      : #eeeeee;
+$Light-btn-border  : #0000006e;
+$Light-btn-reset   : #62b5bd;
+$Light-btn-result  : #ff8a38;
+$Light-btn-general : #ffffff;
+$Light-text-color1 : #343428;
+$Light-text-color2 : #4d4d45;
+// Colors Theme 3 - Custom
+$Custom-background-color: #17062a;
+$Custom-color1     : #1f0836;
+$Custom-color2     : #1e0836;
+$Custom-btn-border : #b040e7;
+$Custom-btn-reset  : #8631b0;
+$Custom-btn-result : #94fff9;
+$Custom-btn-general: #331b4d;
+$Custom-text-color1: #ffed41;
+$Custom-text-color2: #fde52a;
+
+.theme-light{
+    background-color: $Light-background-color;
+    .head{
+        h3,h5{
+            color: $Light-text-color1;
+        }
+
+        .theme-container .bar{
+            background-color: $Light-color1;
+            div{
+                background-color: $Light-btn-result;
+            }
+        }
+    }
+
+    .mid{
+        h2{
+            background-color: $Light-color2;
+            color: $Light-text-color1;
+        }
+    }
+
+    .down{
+        background-color: $Light-color1;
+
+        .number-btn{
+            background-color: $Light-btn-general;
+            color: $Light-text-color1;
+            border: none;
+            border-bottom: 5px solid $Light-btn-border;
+        }
+
+        .reset-btn, .del-btn{
+            background-color: $Light-btn-reset;
+            color: white;
+        }
+
+        .result-btn{
+            background-color: $Light-btn-result;
+            color: white;
+        }
+
+    }
+}
+
+.theme-dark{
+    background-color: $Dark-background-color;
+
+    .head{
+        h3,h5{
+            color: $Dark-text-color2;
+        }
+
+        .theme-container .bar{
+            background-color: $Dark-color1;
+
+            div{
+                background-color: $Dark-btn-result;
+            }
+        }
+    }
+
+    .mid{
+        h2{
+            background-color: $Dark-color2;
+            color: $Dark-text-color2;
+        }
+    }
+
+    .down{
+        background-color: $Dark-color1;
+
+        .number-btn{
+            background-color: $Dark-btn-general;
+            color: $Dark-text-color1;
+            border: none;
+            border-bottom: 5px solid $Dark-btn-border;
+        }
+
+        .reset-btn, .del-btn{
+            background-color: $Dark-btn-reset;
+            color: $Dark-text-color2;
+        }
+
+        .result-btn{
+            background-color: $Dark-btn-result;
+            color: $Dark-text-color2;
+        }
+
+    }
+}
+
+.theme-custom{
+    background-color: $Custom-background-color;
+
+    .head{
+        h3,h5{
+            color: $Custom-text-color2;
+        }
+
+        .theme-container .bar{
+            background-color: $Custom-color1;
+
+            div{
+                background-color: $Custom-btn-result;
+            }
+        }
+    }
+
+    .mid{
+        h2{
+            background-color: $Custom-color2;
+            color: $Custom-text-color2;
+        }
+    }
+
+    .down{
+        background-color: $Custom-color1;
+
+        .number-btn{
+            background-color: $Custom-btn-general;
+            color: $Custom-text-color1;
+            border: none;
+            border-bottom: 5px solid $Custom-btn-border;
+        }
+
+        .reset-btn, .del-btn{
+            background-color: $Custom-btn-reset;
+            color: white;
+        }
+
+        .result-btn{
+            background-color: $Custom-btn-result;
+            color: black;
+        }
+
+    }
+}

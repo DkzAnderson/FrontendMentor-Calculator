@@ -1,0 +1,153 @@
+@import './variables.scss';
+
+body{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+$border-xs:  8px;
+$border-s : 12px;
+$border-m : 18px;
+$border-l : 24px;
+
+
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "head   head"
+    "input input"
+    "btns   btns";
+    grid-template-rows: 7% 16% auto;
+    padding: 24px;
+    row-gap: 30px;
+
+
+
+    .head{
+        grid-area: head;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        h3{
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .container{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            h5{
+                align-self: flex-end;
+                margin-bottom: 4px;
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+            }
+
+            .theme-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 4px;
+
+                span{
+                    display: flex;
+                    gap: 20px;
+
+                    h5{
+                        cursor: pointer;
+                        font-size: 1.2rem;
+                    }
+
+
+                }
+
+                .bar{
+                    position: relative;
+                    width: 70px;
+                    height: 24px;
+                    border-radius: $border-m;
+                    padding: 4px;
+
+                    div{
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 50%;
+                        left: 4px;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .mid{
+        grid-area: input;
+        width: 100%;
+        height: 100%;
+
+
+        h2{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            max-width: 310px;
+            height: 100%;
+            border: none;
+            padding: 24px;
+            font-size: 5.5rem;
+            font-weight: bold;
+            border-radius: $border-xs;
+            overflow: hidden;
+        }
+    }
+
+    .down{
+        grid-area: btns;
+        display: grid;
+        grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
+        grid-template-rows: 18.4% 18.4% 18.4% 18.4% 18.4%;
+        row-gap: 2%;
+        column-gap: 2%;
+        grid-template-areas: 
+        "7   8   9  di"
+        "4   5   6  ad"
+        "1   2   3  su"
+        "po  0 div mul"
+        "re re ig ig";
+        padding: 24px;
+        border-radius: $border-xs;
+
+        .number-btn{
+            width: 92%;
+            height: 92%;
+            font-size: 2.5rem;
+            font-weight: bold;
+            border-radius: $border-s;
+        }
+
+        .del-btn{
+            font-size: 1.8rem;
+        }
+
+        .result-btn{
+            grid-area: ig;
+        }
+
+        .reset-btn{
+            grid-area: re;
+            font-size: 2rem;
+        }
+    }
+}
